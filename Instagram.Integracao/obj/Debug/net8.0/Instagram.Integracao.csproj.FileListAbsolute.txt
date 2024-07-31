@@ -31,3 +31,5 @@ C:\dev\IntegracaoApi\Instagram.Integracao\obj\Debug\net8.0\refint\Instagram.Inte
 C:\dev\IntegracaoApi\Instagram.Integracao\obj\Debug\net8.0\Instagram.Integracao.pdb
 C:\dev\IntegracaoApi\Instagram.Integracao\obj\Debug\net8.0\Instagram.Integracao.genruntimeconfig.cache
 C:\dev\IntegracaoApi\Instagram.Integracao\obj\Debug\net8.0\ref\Instagram.Integracao.dll
+C:\dev\IntegracaoApi\Instagram.Integracao\bin\Debug\net8.0\Flunt.dll
+C:\dev\IntegracaoApi\Instagram.Integracao\bin\Debug\net8.0\Newtonsoft.Json.dll
