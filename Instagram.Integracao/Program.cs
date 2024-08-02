@@ -20,10 +20,12 @@ builder.Services.AddTransient<IHandler<CriarpublicacaoDeStory>, StoryHandler>();
 builder.Services.AddTransient<IHandler<CriarpublicacaoDeMensagem>, MensagemHandler>();
 builder.Services.AddTransient<IHandler<CriarBuscaDeComentario>, ComentarioHandler>();
 builder.Services.AddTransient<IPostService, PostService>();
+builder.Services.AddTransient<IStoryService, StoryService>();
 builder.Services.AddTransient<IComentarioService, ComentarioService>();
 builder.Services.AddTransient<IJsonService, JsonService>();
 builder.Services.AddTransient<IRequisicaoPostService, RequisicaoPostService>();
 builder.Services.AddTransient<IRequisicaoComentario, RequisicaoComentario>();
+builder.Services.AddTransient<IRequisicaoStory, RequisicaoStory>();
 builder.Services.Configure<GraphApi>(builder.Configuration.GetSection("GraphApi"));
 builder.Services.AddHttpClient("Instagram", httpClient =>
 {

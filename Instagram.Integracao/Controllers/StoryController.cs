@@ -19,9 +19,9 @@ namespace Instagram.Integracao.Controllers
 
 
         [HttpPost]
-        public ActionResult<RetornoGenericoModel> Post([FromBody] CriarpublicacaoDeStory body)
+        public async Task<ActionResult<RetornoGenericoModel>> Post([FromBody] CriarpublicacaoDeStory body)
         {
-            var result = (RetornoGenericoModel)_handler.Handle(body);
+            var result = await _handler.Handle(body) as RetornoGenericoModel;
             if (!result.Sucesso)
                 return BadRequest(result);
             return Ok(result);

@@ -7,6 +7,7 @@ namespace Instagram.Integracao.Models
     public class CriarpublicacaoDeStory : Notifiable, IModel
     {
         public string Media { get; set; }
+        public bool TipoVideo { get; set; }
 
         public void Validate()
         {

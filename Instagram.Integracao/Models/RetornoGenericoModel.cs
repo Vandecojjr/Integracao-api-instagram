@@ -17,10 +17,6 @@ namespace Instagram.Integracao.Models.Contracts
         public bool Sucesso { get; set; }
         public string Mensagem { get; set; }
         public object Dados { get; set; }
-
-        public static explicit operator RetornoGenericoModel(Task<IRetornoGenericoModel> v)
-        {
-            throw new NotImplementedException();
-        }
     }
+
 }

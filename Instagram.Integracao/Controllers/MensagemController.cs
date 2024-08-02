@@ -22,9 +22,9 @@ namespace Instagram.Integracao.Controllers
         public void Get() { }
 
         [HttpPost]
-        public ActionResult<RetornoGenericoModel> Post([FromBody] CriarpublicacaoDeMensagem body)
+        public async Task<ActionResult<RetornoGenericoModel>> Post([FromBody] CriarpublicacaoDeMensagem body)
         {
-            var result = (RetornoGenericoModel)_handler.Handle(body);
+            var result = await _handler.Handle(body) as RetornoGenericoModel;
             if (!result.Sucesso)
                 return BadRequest(result);
             return Ok(result);
