@@ -29,5 +29,6 @@ namespace Instagram.Integracao.Controllers
                 return BadRequest(result);
             return Ok(result);
         }
+
     }
 }
