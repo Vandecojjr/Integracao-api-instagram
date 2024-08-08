@@ -1,0 +1,11 @@
+services:
+  api:
+    container_name: integracao_api
+    build:
+      dockerfile: dockerfile
+      context: .
+    ports:
+      - 8080:8080
+    environment:
+      - GraphApi__Token=${GRAPHAPI_TOKEN}
+      - GraphApi__UserId=${GRAPHAPI_USERID}
