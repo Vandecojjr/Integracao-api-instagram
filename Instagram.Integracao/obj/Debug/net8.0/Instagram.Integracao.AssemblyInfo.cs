@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Instagram.Integracao")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bc50075ae8076a04b94e4babe0edfc239f46d706")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5714051217156fda3e97d403a33987cb5d82038d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Instagram.Integracao")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Instagram.Integracao")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

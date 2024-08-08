@@ -10,25 +10,22 @@ namespace Instagram.Integracao.Controllers
     [Route("/v1/mensagem")]
     public class MensagemController : ControllerBase
     {
-        private readonly IHandler<CriarpublicacaoDeMensagem> _handler;
+        private readonly IHandler<CriarBuscaDeMensagem> _handlerBuscar;
 
-        public MensagemController(IHandler<CriarpublicacaoDeMensagem> handler)
+        public MensagemController(IHandler<CriarBuscaDeMensagem> handler)
         {
-            _handler = handler;
+            _handlerBuscar = handler;
         }
 
 
         [HttpGet]
-        public void Get() { }
-
-        [HttpPost]
-        public async Task<ActionResult<RetornoGenericoModel>> Post([FromBody] CriarpublicacaoDeMensagem body)
+        public async Task<ActionResult<RetornoGenericoModel>> Get([FromQuery] string? UsuarioId)
         {
-            var result = await _handler.Handle(body) as RetornoGenericoModel;
+            var result = await _handlerBuscar.Handle(new CriarBuscaDeMensagem { idDoUsuario = UsuarioId }) as RetornoGenericoModel;
             if (!result.Sucesso)
                 return BadRequest(result);
             return Ok(result);
-        }
 
+        }
     }
 }

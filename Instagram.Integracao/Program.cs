@@ -17,7 +17,7 @@ builder.Services.AddControllers();
 
 builder.Services.AddTransient<IHandler<CriarpublicacaoDePost>, PostHandler>();
 builder.Services.AddTransient<IHandler<CriarpublicacaoDeStory>, StoryHandler>();
-builder.Services.AddTransient<IHandler<CriarpublicacaoDeMensagem>, MensagemHandler>();
+builder.Services.AddTransient<IHandler<CriarBuscaDeMensagem>, BuscarMensagemHandler>();
 builder.Services.AddTransient<IHandler<CriarBuscaDeComentario>, ComentarioHandler>();
 builder.Services.AddTransient<IPostService, PostService>();
 builder.Services.AddTransient<IStoryService, StoryService>();
