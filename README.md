@@ -7,10 +7,10 @@ no instagram.
 
 Antes de suber o container configure as variaveis de ambiente do arquivo .ENV
 
-```sh
+```
 GRAPHAPI_TOKEN=seu_token
 GRAPHAPI_USERID=seu_userid
-
+```
 Para rodar a API basta seguir os comandos abaixo
 e ela ficara disponivel na porta 8080.
 
@@ -18,7 +18,8 @@ Para acessar o swagger basta acessar a rota localhost/:8080/swagger/index.html
 
 ```sh
 docker compose up -d
-
+```
 caso nao queria que a API tenha acesso ao swagger basta remover o seguinte comando do docker-compose.yml
-```sh
+```
 - ASPNETCORE_ENVIRONMENT=Development
+```
