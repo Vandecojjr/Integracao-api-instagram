@@ -1,20 +1,24 @@
-# Nome do Projeto
+# Integração com a API do instagram
 
-Uma breve descrição do que o projeto faz e para quem ele é.
-
-## Índice
-
-- Instalação
-- Uso
-- Contribuição
-- Licença
-- Contato
+Um API que integra com a Graph API do instagram e facilita a publicação e visualização de conteudos
+no instagram.
 
 ## Instalação
 
-Descreva como instalar e configurar o ambiente de desenvolvimento. Por exemplo:
+Antes de suber o container configure as variaveis de ambiente do arquivo .ENV
 
 ```sh
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
-npm install
+GRAPHAPI_TOKEN=seu_token
+GRAPHAPI_USERID=seu_userid
+
+Para rodar a API basta seguir os comandos abaixo
+e ela ficara disponivel na porta 8080.
+
+Para acessar o swagger basta acessar a rota localhost/:8080/swagger/index.html
+
+```sh
+docker compose up -d
+
+caso nao queria que a API tenha acesso ao swagger basta remover o seguinte comando do docker-compose.yml
+```sh
+- ASPNETCORE_ENVIRONMENT=Development
