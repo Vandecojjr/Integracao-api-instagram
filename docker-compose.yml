@@ -9,3 +9,4 @@ services:
     environment:
       - GraphApi__Token=${GRAPHAPI_TOKEN}
       - GraphApi__UserId=${GRAPHAPI_USERID}
+      - ASPNETCORE_ENVIRONMENT=Development

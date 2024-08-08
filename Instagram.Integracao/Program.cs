@@ -22,10 +22,12 @@ builder.Services.AddTransient<IHandler<CriarBuscaDeComentario>, ComentarioHandle
 builder.Services.AddTransient<IPostService, PostService>();
 builder.Services.AddTransient<IStoryService, StoryService>();
 builder.Services.AddTransient<IComentarioService, ComentarioService>();
+builder.Services.AddTransient<IMensagemService, MensagemService>();
 builder.Services.AddTransient<IJsonService, JsonService>();
 builder.Services.AddTransient<IRequisicaoPostService, RequisicaoPostService>();
 builder.Services.AddTransient<IRequisicaoComentario, RequisicaoComentario>();
 builder.Services.AddTransient<IRequisicaoStory, RequisicaoStory>();
+builder.Services.AddTransient<IRequisicaoMensagem, RequisicaoMensagem>();
 builder.Services.Configure<GraphApi>(builder.Configuration.GetSection("GraphApi"));
 builder.Services.AddHttpClient("Instagram", httpClient =>
 {
