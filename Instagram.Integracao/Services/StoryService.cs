@@ -16,7 +16,7 @@ namespace Instagram.Integracao.Services
         }
         public async Task<IRetornoGenericoModel> Criar(CriarpublicacaoDeStory model)
         {
-            return await CriarConteinerDePublicacao(model.Media, model.TipoVideo);
+            return await CriarConteinerDePublicacao(model.LinkDaMedia, model.Video);
         }
 
         public async Task<IRetornoGenericoModel> CriarConteinerDePublicacao(string mediaLink, bool tipoDeMidia)

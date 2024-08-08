@@ -17,10 +17,14 @@ namespace Instagram.Integracao.Services
             _ApiSettings = apiSettings.Value;
         }
 
-        public Task<HttpResponseMessage> ContainerRequisicao(string mediaLink, string descricao)
+        public Task<HttpResponseMessage> ContainerRequisicao(string mediaLink, string descricao, bool tipoDeMidia)
         {
+            var media = $"image_url={mediaLink}";
+            if (tipoDeMidia)
+                media = $"video_url={mediaLink}";
+
             var url = $"{_ApiSettings.UserId}/media?" +
-                $"image_url={mediaLink}" +
+                $"{media}" +
                 $"&caption={descricao}" +
                 $"&access_token={_ApiSettings.Token}";
 

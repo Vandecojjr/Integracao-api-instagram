@@ -7,14 +7,15 @@ namespace Instagram.Integracao.Models
     public class CriarpublicacaoDePost : Notifiable, IModel
     {
         public string Descricao { get; set; }
-        public string Media { get; set; }
+        public string LinkDaMedia { get; set; }
+        public bool Video { get; set; }
 
         public void Validate()
         {
 
             AddNotifications(new Contract()
                 .Requires()
-                .IsNotNullOrEmpty(Media, "Media", "Media deve ser informado")
+                .IsNotNullOrEmpty(LinkDaMedia, "Media", "Media deve ser informado")
                 .IsNotNullOrEmpty(Descricao, "Descricao", "Descricao deve ser informado")
             );
         }

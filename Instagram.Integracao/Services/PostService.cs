@@ -23,12 +23,12 @@ namespace Instagram.Integracao.Services
 
         public async Task<IRetornoGenericoModel> Criar(CriarpublicacaoDePost model)
         {
-            return await CriarConteinerDePublicacao(model.Media, model.Descricao);
+            return await CriarConteinerDePublicacao(model.LinkDaMedia, model.Descricao, model.Video);
         }
 
-        public async Task<IRetornoGenericoModel> CriarConteinerDePublicacao(string mediaLink, string descricao)
+        public async Task<IRetornoGenericoModel> CriarConteinerDePublicacao(string mediaLink, string descricao, bool tipoDeMidia)
         {
-            var resposta = await _requisicao.ContainerRequisicao(mediaLink, descricao);
+            var resposta = await _requisicao.ContainerRequisicao(mediaLink, descricao, tipoDeMidia);
             var conteudo = await _jsonService.ObterRespostaAsync(resposta);
 
             if (!resposta.IsSuccessStatusCode)
