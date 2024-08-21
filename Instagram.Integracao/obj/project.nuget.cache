@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "G9whS8uzFtizaj1qDStErUwWqLiomLJ1YgEGNngPpCV88Fq6Ud9CCKUWRhStk56SlgtuTxhRetyKmJt0GqXUfQ==",
+  "dgSpecHash": "v1Yf90TT1fE8a0BuMu/CRebxN+c5BYF8FPHVyLdYdZK0Kpvx4rW8EiMp5Qg1IHIvz1zSQWQNX7pwfQhUp+4A6w==",
   "success": true,
-  "projectFilePath": "C:\\dev\\IntegracaoApi\\Instagram.Integracao\\Instagram.Integracao.csproj",
+  "projectFilePath": "C:\\dev\\Integracao-api-instagram\\Instagram.Integracao\\Instagram.Integracao.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vanderlei\\.nuget\\packages\\flunt\\1.0.4\\flunt.1.0.4.nupkg.sha512",
     "C:\\Users\\Vanderlei\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.1\\microsoft.aspnetcore.openapi.8.0.1.nupkg.sha512",

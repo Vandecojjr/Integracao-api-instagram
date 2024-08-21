@@ -1,3 +1,5 @@
+using System.Text;
+using Instagram.Integracao.Models;
 using Instagram.Integracao.Services.Contracts;
 using Instagram.Integracao.Settings;
 using Microsoft.Extensions.Options;
@@ -26,5 +28,25 @@ namespace Instagram.Integracao.Services
             return _cliente.GetAsync(url);
         }
 
+        public async Task<HttpResponseMessage> EnviarMensagem(CriarpublicacaoDeMensagem model)
+        {
+            var url = $"/{_ApiSettings.UserId}/messages";
+
+            var requestBody = new
+            {
+                recipient = new { id = model.IdDoUsuario },
+                message = new { text = model.Texto }
+            };
+
+            var json = Newtonsoft.Json.JsonConvert.SerializeObject(requestBody);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var request = new HttpRequestMessage(HttpMethod.Post, url);
+            request.Headers.Add("Authorization", $"Bearer {_ApiSettings.Token}");
+            request.Content = content;
+
+            var resposta = await _cliente.SendAsync(request);
+            return resposta;
+        }
     }
 }

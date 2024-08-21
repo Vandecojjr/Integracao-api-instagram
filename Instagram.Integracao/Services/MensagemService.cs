@@ -26,5 +26,15 @@ namespace Instagram.Integracao.Services
 
         }
 
+        public async Task<IRetornoGenericoModel> Enviar(CriarpublicacaoDeMensagem model)
+        {
+            var resposta = await _requisicao.EnviarMensagem(model);
+            var conteudo = await _jsonService.ObterRespostaAsync(resposta);
+
+            if (!resposta.IsSuccessStatusCode)
+                return new RetornoGenericoModel(false, "Algo deu errado!", conteudo);
+
+            return new RetornoGenericoModel(true, "Comentarios recuperados com sucesso!", conteudo);
+        }
     }
 }

@@ -8,7 +8,6 @@ namespace Instagram.Integracao.Models
     {
         public string IdDoUsuario { get; set; }
         public string Texto { get; set; }
-        public string Link { get; set; }
 
         public void Validate()
         {

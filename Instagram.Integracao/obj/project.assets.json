@@ -1300,11 +1300,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\IntegracaoApi\\Instagram.Integracao\\Instagram.Integracao.csproj",
+      "projectUniqueName": "C:\\dev\\Integracao-api-instagram\\Instagram.Integracao\\Instagram.Integracao.csproj",
       "projectName": "Instagram.Integracao",
-      "projectPath": "C:\\dev\\IntegracaoApi\\Instagram.Integracao\\Instagram.Integracao.csproj",
+      "projectPath": "C:\\dev\\Integracao-api-instagram\\Instagram.Integracao\\Instagram.Integracao.csproj",
       "packagesPath": "C:\\Users\\Vanderlei\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\IntegracaoApi\\Instagram.Integracao\\obj\\",
+      "outputPath": "C:\\dev\\Integracao-api-instagram\\Instagram.Integracao\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Vanderlei\\AppData\\Roaming\\NuGet\\NuGet.Config",
